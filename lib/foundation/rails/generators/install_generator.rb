@@ -35,15 +35,15 @@ module Foundation
           return ['.scss', ' //='] if File.exist?('app/assets/stylesheets/application.scss')
         end
 
-        def create_layout
-          if options.haml?||(defined?(Haml) && options.haml?)
-            template 'application.html.haml', "app/views/layouts/#{file_name}.html.haml"
-          elsif options.slim?||(defined?(Slim) && options.slim?)
-            template 'application.html.slim', "app/views/layouts/#{file_name}.html.slim"
-          else
-            template 'application.html.erb', "app/views/layouts/#{file_name}.html.erb"
-          end
-        end
+        # def create_layout
+        #   if options.haml?||(defined?(Haml) && options.haml?)
+        #     template 'application.html.haml', "app/views/layouts/#{file_name}.html.haml"
+        #   elsif options.slim?||(defined?(Slim) && options.slim?)
+        #     template 'application.html.slim', "app/views/layouts/#{file_name}.html.slim"
+        #   else
+        #     template 'application.html.erb', "app/views/layouts/#{file_name}.html.erb"
+        #   end
+        # end
 
         private
 
